@@ -19,8 +19,5 @@ Route::get('/', function () {
 
     return view('home', ['movies' => $movies]);
 });
-
-route::get('/movies/{id}', function ($id) {
-    $movie = Movie::find($id);
-    return view('movies/show', ['movies' => $movie]);
-});
+route::get('/movies/{id}', [MovieController::class, 'show']);
+route::get('/movies', [MovieController::class, 'movies']);

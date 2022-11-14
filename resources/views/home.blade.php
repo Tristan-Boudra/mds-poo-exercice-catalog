@@ -26,6 +26,7 @@
 <body>
     <div class="container">
         <h1>{{ config('app.name') }}</h1>
+        <h1><a href="/movies">Show 20 movies</a></h1>
 
         <div class="wrapper">
             @foreach ($movies as $movie)

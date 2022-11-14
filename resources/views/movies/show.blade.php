@@ -25,5 +25,3 @@
   </div>
 </body>
 </html>
-
-<span class="font-bold"></span>
