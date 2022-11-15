@@ -9,10 +9,14 @@ class MovieController extends Controller
         return view('movies.show', ['movies' => $movie]);
     }
 
+    // public function movies(){
+    //     $movies = Movie::limit(20)->get();
+    //     return view('movies', ['movies' => $movies]);
+    // }
+
     public function movies(){
-        $movies = Movie::limit(20)->get();
+        $movies = Movie::paginate(20);
         return view('movies', ['movies' => $movies]);
-        dd($movies);
     }
 }
 ?>
