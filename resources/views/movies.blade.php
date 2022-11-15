@@ -11,13 +11,15 @@
   <h1 class="text-center font-bold text-3xl">List of 20 movies</h1>
   <div class="max-w-5xl mx-auto p-10 flex flex-row flex-wrap">
     @foreach ($movies as $movie)
-    <div class="mx-auto p-1">
+    <div>
       <h1 class="text-center">{{ $movie->originalTitle }}</h1>
-      <img src="{{ $movie->poster }}" alt="" class="mx-auto">
+      <a href="/movies/{{ $movie->id }}">
+        <img src="{{ $movie->poster }}" alt="{{ $movie->primaryTitle }}">
+      </a>
     </div>
     @endforeach
     <div>
-      {{ $movies->links('paginator') }}
+      {{ $movies->appends(request()->query())->links('paginator') }}
     </div>
   </div>
 </body>

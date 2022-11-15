@@ -9,14 +9,19 @@ class MovieController extends Controller
         return view('movies.show', ['movies' => $movie]);
     }
 
-    // public function movies(){
-    //     $movies = Movie::limit(20)->get();
-    //     return view('movies', ['movies' => $movies]);
-    // }
-
     public function movies(){
-        $movies = Movie::paginate(20);
-        return view('movies', ['movies' => $movies]);
+        $request = request();
+        $page = $request->input('page');
+        $order_by = $request->input('order_by');
+        $order = $request->input('order');
+
+        $query = movie::query();
+
+        if(($order_by == 'startYear' || $order_by == 'averageRating') && ($order == 'asc' || $order == 'desc')){
+            $query->orderBy($order_by, $order);
+        }
+        $movies = $query->paginate(20);
+        return view('movies', ['movies' => $movies, 'page' => $page, 'order_by' => $order_by, 'order' => $order]);
     }
 }
 ?>
