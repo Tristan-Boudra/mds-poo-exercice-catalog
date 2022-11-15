@@ -10,7 +10,7 @@
 </head>
 <body>
   <div class="border border-grey-600 max-w-5xl mx-auto p-10">
-    <h1 class="text-center text-2xl">Discover {{ $movies->originalTitle }}</h1>
+    <h1 class="text-center text-2xl text-[#DC1222]">Discover {{ $movies->originalTitle }}</h1>
     <img src="{{ $movies->poster }}" alt="" class="mx-auto mt-10 rounded">
     <div class="h-0.5 w-96 bg-black mx-auto rounded mt-10"></div>
     <div>
