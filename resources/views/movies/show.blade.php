@@ -17,7 +17,7 @@
       <p class="text-center mt-10"><span class="font-bold">Original title :</span> {{ $movies->originalTitle }}</p>
       <p class="text-center"><span class="font-bold">Start year :</span> {{ $movies->startYear }}</p>
       <p class="text-center"><span class="font-bold">Duration :</span> {{ $movies->runtimeMinutes }} minutes</p>
-      <p class="text-center"><span class="font-bold">Genres :</span> {{ $movies->genres }}</p>
+      <p class="text-center"><span class="font-bold">Genres :</span></p>
       <p class="text-center"><span class="font-bold">Summary :</span> {{ $movies->plot }}</p>
       <p class="text-center"><span class="font-bold">Rating :</span> {{ $movies->averageRating }}</p>
       <p class="text-center"><span class="font-bold">Number of votes :</span> {{ $movies->numVotes }}</p>
