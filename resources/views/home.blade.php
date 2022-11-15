@@ -29,6 +29,7 @@
         <a class="no-underline" href="/movies"><h1 class="no-underline">Show 20 movies</h1></a>
         <a class="no-underline" href="/movies?order_by=startYear&order=asc"><h1 class="no-underline">Start Year</h1></a>
         <a class="no-underline" href="/movies?order_by=averageRating&order=desc"><h1 class="no-underline">Average Rating</h1></a>
+        <a class="no-underline" href="/movies/random"><h1 class="no-underline">Random movies</h1></a>
         <div class="wrapper">
             @foreach ($movies as $movie)
             <div>

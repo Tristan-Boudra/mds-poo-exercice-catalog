@@ -18,9 +18,9 @@
       </a>
     </div>
     @endforeach
-    <div>
-      {{ $movies->appends(request()->query())->links('paginator') }}
-    </div>
+  </div>
+  <div class="mx-auto">
+    {{ $movies->appends(request()->query())->links('paginator') }}
   </div>
 </body>
 </html>

@@ -23,5 +23,10 @@ class MovieController extends Controller
         $movies = $query->paginate(20);
         return view('movies', ['movies' => $movies, 'page' => $page, 'order_by' => $order_by, 'order' => $order]);
     }
+
+    public function random(){
+        $movies = Movie::inRandomOrder()->whereNotNull('poster')->limit(10)->get();
+        return view('movies.random', ['movies' => $movies]);
+    }
 }
 ?>
